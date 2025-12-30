@@ -1,10 +1,11 @@
 ---
 title: "EMG Controlled Music Player"
-excerpt: "Gesture-based music control using EMG signals and embedded hardware"
+excerpt: "Real-time EMG-based gesture control for music playback"
 collection: portfolio
 header:
   teaser: /images/emg_teaser.jpg
 ---
+
 
 ## Overview
 An embedded system that enables music playback control using **EMG signals**
