@@ -3,7 +3,7 @@ title: "IoT Health Monitoring System (PCB-Based)"
 excerpt: "Custom PCB-based IoT device for real-time heart rate, SpO₂, and temperature monitoring"
 collection: portfolio
 header:
-  teaser: /images/iot_health_teaser.jpg
+  teaser: /images/iot_health_teaser.png
 ---
 
 ## 🎥 Demo
@@ -25,64 +25,50 @@ remote and personalized health monitoring applications.
 
 ---
 
-## 🎯 Motivation
-Remote health monitoring is essential for early diagnosis and preventive healthcare.
-Conventional systems are often bulky or expensive. This project demonstrates a **cost-effective,
-PCB-integrated IoT solution** that enables real-time physiological data acquisition with
-reliable power delivery and scalability.
-
----
-
 ## 🏗 System Architecture
 ![System Architecture Diagram](/images/iot_health_architecture.png)
 
-**System Flow:**
-1. Biomedical sensors acquire physiological data  
-2. ATmega328P processes sensor data  
-3. Power management unit ensures stable operation  
-4. Data transmitted via serial/IoT interface  
+The system consists of:
+- Biomedical sensors for physiological data acquisition  
+- ATmega328P microcontroller for processing  
+- Power management circuitry  
+- Serial/IoT interface for data transmission  
 
 ---
 
-## 🔧 Hardware Components
+## 🔧 Key Hardware Components
 
 ### 🧠 Microcontroller
-![ATmega328P](/images/atmega328p.jpg)
+![ATmega328P](/images/ATmega328P.jpg)
 
-- **ATmega328P**
-- Low-power embedded microcontroller
-- Handles sensor interfacing, processing, and communication
+- ATmega328P low-power microcontroller
+- Handles sensor interfacing and data processing
 
 ---
 
 ### ❤️ Sensors
-![MAX30102 Pulse Oximeter](/images/max30102.jpg)
-![MAX30205 Temperature Sensor](/images/max30205.jpg)
+![MAX30102 Pulse Oximeter](/images/MAX30102%20Pulse%20Oximeter.jpg)
+![MAX30205 Temperature Sensor](/images/MAX30205%20Temperature%20Sensor.jpg)
 
-- **MAX30102** – Heart rate and SpO₂ sensor (PPG-based)
-- **MAX30205** – Clinical-grade digital temperature sensor (I2C)
-
-These sensors provide accurate, non-invasive physiological measurements.
+- **MAX30102** – Heart rate and SpO₂ monitoring  
+- **MAX30205** – Clinical-grade digital temperature sensor  
 
 ---
 
 ### 🔋 Power Management
-![TP4056 Charger](/images/tp4056.jpg)
-![TPS63020 Buck-Boost Converter](/images/tps63020.jpg)
+![TP4056 Charger](/images/TP4056%20Charger.jpg)
+![TPS63020 Buck-Boost Converter](/images/TPS63020%20Buck-Boost%20Converter.jpg)
 
-- **TP4056** Li-ion battery charging module
-- **TPS63020** automatic buck-boost DC-DC converter
-- Single-cell Li-ion battery (3.6V)
-
-Ensures **stable voltage output** and efficient energy usage across varying load conditions.
+- TP4056 Li-ion battery charging module  
+- TPS63020 automatic buck-boost DC-DC converter  
 
 ---
 
 ### 🔌 Programming & Communication
-![FT232RL USB to Serial](/images/ft232rl.jpg)
+![FT232RL USB to Serial](/images/USB.png)
 
-- **FT232RL USB-to-Serial** interface
-- Used for bootloading, debugging, and firmware updates
+- FT232RL USB-to-Serial interface
+- Used for bootloading and debugging
 
 ---
 
@@ -90,7 +76,6 @@ Ensures **stable voltage output** and efficient energy usage across varying load
 ![Schematic Design](/images/iot_health_schematic.png)
 
 The schematic was designed using **KiCad**, following manufacturer datasheets for:
-- Decoupling capacitors
 - Clock circuitry (8 MHz crystal)
 - I2C sensor connections
 - Power regulation and battery charging
@@ -103,16 +88,12 @@ The schematic was designed using **KiCad**, following manufacturer datasheets fo
 ![PCB Layout With Connections](/images/iot_health_pcb_connections.png)
 
 ### PCB Layout (Without Connections)
-![PCB Layout Without Connections](/images/iot_health_pcb_no_connections.png)
-
-- Multi-module PCB designed in **KiCad**
-- Gerber files generated and sent to fabrication vendor
-- Layout optimized for signal integrity and power stability
+![PCB Layout Without Connections](/images/iot_health_pcb_no_connections.jpg)
 
 ---
 
-## 🛠 Fabricated PCB & Prototype
-![Final Assembled PCB](/images/iot_health_final_board.jpg)
+## 🛠 Fabricated PCB & Final Prototype
+![Final Assembled PCB](/images/iot_health_final_board.png)
 
 The final fabricated PCB integrates:
 - Power management modules
@@ -120,20 +101,20 @@ The final fabricated PCB integrates:
 - OLED display
 - ATmega328P microcontroller
 
-The prototype was tested for continuity, voltage stability, and end-to-end functionality.
+The board was tested for voltage stability, connectivity, and real-world operation.
 
 ---
 
 ## 💻 Firmware & Software
 - Embedded C firmware for ATmega328P
-- Sensor communication via **I2C**
-- Serial data transmission for monitoring
+- Sensor interfacing via **I2C**
+- Serial communication for data output
 - Bootloader-based firmware upload
 
 ---
 
 ## 🧪 Testing & Validation
-- Functional testing of all sensors
+- Functional testing of heart rate, SpO₂, and temperature sensors
 - Power stability verification under varying load
 - Signal validation using multimeters and oscilloscopes
 - End-to-end testing on fabricated PCB
@@ -141,10 +122,10 @@ The prototype was tested for continuity, voltage stability, and end-to-end funct
 ---
 
 ## ✅ Results
-- Accurate real-time heart rate, SpO₂, and temperature readings
+- Accurate real-time physiological measurements
 - Stable voltage regulation using buck-boost topology
-- Compact, portable PCB-based design
-- Reliable operation in real-world testing
+- Compact, portable PCB-based implementation
+- Reliable operation in practical testing
 
 ---
 
@@ -158,18 +139,15 @@ The prototype was tested for continuity, voltage stability, and end-to-end funct
 
 ## 🚀 Future Improvements
 - Wireless connectivity (Bluetooth / Wi-Fi)
-- Cloud integration (AWS IoT / Google Cloud IoT)
-- Data logging and trend analysis
+- Cloud integration for data logging
+- Power optimization using sleep modes
 - Custom wearable enclosure
-- Further power optimization using sleep modes
 
 ---
 
-## 🧠 Key Engineering Decisions
-- Selected **TPS63020 buck-boost** to ensure stable 3.3V output across battery discharge
-- Used **I2C sensors** to reduce pin count and simplify routing
-- Separated power and signal routing to reduce noise
-- Chose ATmega328P for low power consumption and ecosystem support
+## 👥 Team Contribution
+- **Kavin K:** PCB design, power management, firmware development  
+- **Gonela Sreeman:** Sensor integration, testing, documentation  
 
 ---
 
