@@ -10,19 +10,16 @@
 main:
   - title: "About"
     url: /
-
+    
   - title: "Projects"
-    url: /Projects/    
-
+    url: /portfolio/
+    
   - title: "Experience"
-    url: /experience/    
+    url: /experience/
     
   - title: "Certificates"
     url: /certificates/
+
         
-  - title: "CV"
-    url: /cv/
-    
-  - title: "CV"
-    url: /cv-json/
+
  
