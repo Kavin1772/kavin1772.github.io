@@ -165,10 +165,11 @@ The prototype was tested for continuity, voltage stability, and end-to-end funct
 
 ---
 
-## 👥 Team Contribution
-- **Kavin K:** PCB design, power management integration, firmware development  
-- **Gonela Sreeman:** Sensor integration, testing, validation, documentation  
-- Supervised by **Dr. Rohit Singh**
+## 🧠 Key Engineering Decisions
+- Selected **TPS63020 buck-boost** to ensure stable 3.3V output across battery discharge
+- Used **I2C sensors** to reduce pin count and simplify routing
+- Separated power and signal routing to reduce noise
+- Chose ATmega328P for low power consumption and ecosystem support
 
 ---
 
